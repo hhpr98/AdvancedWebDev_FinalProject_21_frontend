@@ -1,3 +1,8 @@
+# Internet banking (frontend)
+
+# Clone at: https://github.com/languyenit598/banking_frontend
+# Site at: https://monca.me/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
