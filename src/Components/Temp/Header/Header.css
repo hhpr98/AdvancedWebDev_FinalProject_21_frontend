@@ -1,0 +1,29 @@
+.company-cover {
+  width: inherit;
+  position: relative;
+  height: 200px;
+  object-fit: cover;
+}
+.company-logo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.box-orange {
+  left: 30px;
+  top: 150px;
+  position: absolute;
+}
+
+.box-blue {
+  width: 100%;
+}
+.company-header {
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 20px;
+  display: flex;
+  margin-left: 150px;
+  justify-content: space-between;
+}

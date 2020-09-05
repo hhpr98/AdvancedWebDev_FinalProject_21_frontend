@@ -1,0 +1,1 @@
+export { dafault as ForeignTransactionListDetail } from "./ForeignTransactionListDetail";

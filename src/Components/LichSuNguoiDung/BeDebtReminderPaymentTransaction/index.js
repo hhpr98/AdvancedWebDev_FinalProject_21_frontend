@@ -1,0 +1,1 @@
+export { default as BeDebtReminderPaymentTransaction } from './BeDebtReminderPaymentTransaction';

@@ -1,0 +1,89 @@
+{
+  "name": "banking_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.0.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.1",
+    "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.1.1",
+    "axios": "^0.19.2",
+    "bizcharts": "^3.5.7",
+    "bootstrap": "^4.5.0",
+    "cross-fetch": "^3.0.4",
+    "date-fns": "^2.15.0",
+    "env-cmd": "^10.1.0",
+    "jquery": "^3.5.1",
+    "jwt-decode": "^2.2.0",
+    "moment": "^2.25.3",
+    "node-sass": "^4.14.1",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.7.2",
+    "rc-tween-one": "^2.7.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-google-recaptcha": "^2.1.0",
+    "react-highlight-words": "^0.16.0",
+    "react-redux": "^7.2.0",
+    "react-responsive": "^8.0.3",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "recharts": "^2.0.0-beta.5",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sweetalert2": "^9.10.9",
+    "universal-cookie": "^4.0.3"
+  },
+  "scripts": {
+    "start": "set PORT=3030 && react-scripts start",
+    "start2": "set PORT=3030 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "precommit": "NODE_ENV=production lint-staged"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/numeral": "0.0.26",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.2",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

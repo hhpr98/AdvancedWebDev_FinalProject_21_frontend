@@ -1,0 +1,94 @@
+.form-profile .ant-input[disabled] {
+  cursor: initial;
+}
+
+.avatar-uploader > .ant-upload {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 0px;
+  background-color: white;
+}
+
+.text-avatar-uploader h5:hover {
+  cursor: pointer;
+  color: #0095f6;
+}
+
+.form-profile .ant-input[disabled] {
+  color: black;
+  border: none;
+  background: white;
+  padding: 5px;
+}
+
+.form-profile
+  .ant-select-disabled.ant-select-single:not(.ant-select-customize-input)
+  .ant-select-selector {
+  color: black;
+  border: none;
+  background: white;
+  padding: 5px;
+}
+.ant-select-disabled .ant-select-selection-search {
+  left: 5px !important;
+}
+.form-profile textarea#bio.ant-input.ant-input-disabled {
+  height: auto;
+}
+.form-profile .ant-form-item-label {
+  /* display: flex; */
+  align-items: center;
+  margin-right: 0px;
+}
+.profile-btn {
+  background: #f55d3e;
+  border: #f55d3e;
+  font-weight: bold;
+  color: white;
+  margin: 0px 5px;
+}
+
+.profile-btn:hover,
+.profile-btn:focus,
+.profile-btn:active,
+.profile-btn.active {
+  background: #f55d3e;
+  border: #f55d3e;
+  font-weight: bold;
+  color: white;
+}
+.form-profile .ant-form-item-label > label {
+  font-weight: bold;
+}
+.form-profile .company-link {
+  margin-left: 5px;
+  font-weight: bold;
+}
+.custom-clear-btn {
+  font-weight: bold;
+  border: none;
+  box-shadow: none;
+}
+.modal-change-password .cancel-btn {
+  font-weight: bold;
+}
+
+.modal-change-password .ant-modal-title {
+  text-align: center;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+}
+.modal-change-password .ant-modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-change-password .ant-modal-header {
+  background-color: #f55d3e;
+}
+
+.form-profile .ant-upload.ant-upload-select-picture-card {
+  margin: 0px 0px 0px 8px;
+}

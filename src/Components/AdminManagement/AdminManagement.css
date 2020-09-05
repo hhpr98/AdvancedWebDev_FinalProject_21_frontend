@@ -1,0 +1,149 @@
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #1890ff;
+}
+.body-layout {
+  height: auto;
+}
+.sider {
+  background-color: #ffffff !important;
+}
+.logo1 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+}
+#title {
+  flex: 1;
+}
+
+.form {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.ant-collapse .ant-collapse-item {
+  border-bottom: unset;
+}
+.form .ant-typography {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  margin-top: 10px;
+}
+.form .ant-select-single {
+  width: 100%;
+}
+.ant-table-content .ant-table-cell {
+  padding: 10px;
+  background: unset;
+}
+.ant-collapse {
+  background: unset;
+  border-bottom: 5px;
+}
+
+.anticon-delete {
+  color: #cc444b;
+  margin-left: 15%;
+}
+.ant-input-number {
+  width: 100%;
+}
+
+.form .ant-btn {
+  margin-top: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.ant-table thead tr th {
+  font-weight: bold;
+}
+
+.ant-table-cell .anticon-sync {
+  margin-left: 20%;
+}
+
+.ant-table-cell .anticon-check-circle {
+  margin-left: 20%;
+}
+
+.ant-row .ant-form-item {
+  width: 100%;
+}
+
+.ant-form-item-required {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: -5px;
+  margin-top: 10px;
+}
+.ant-form-item-label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.ant-form-item-control-input-content .ant-btn-primary {
+  margin-top: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: #fb2609;
+  border-color: #fb2609;
+}
+.AdminManagement input {
+  background: none !important;
+  border: none;
+  border-bottom: 1px solid rgba(63, 37, 37, 0.2);
+  border-radius: 0;
+}
+.AdminManagement #AddForm .ant-select-selector {
+  border: none;
+  border-bottom: 1px solid rgba(63, 37, 37, 0.2);
+  border-radius: 0;
+}
+#AddForm {
+  padding: 10px;
+}
+#AddForm .ant-input-password {
+  border: none;
+  border-bottom: 1px solid rgba(63, 37, 37, 0.2);
+  border-radius: 0;
+}
+
+#UpdateForm .ant-select-selector {
+  border: none;
+  border-bottom: 1px solid rgba(63, 37, 37, 0.2);
+  border-radius: 0;
+}
+.AdminManagement .ant-input-affix-wrapper {
+  border: none;
+  border-bottom: 1px solid rgba(63, 37, 37, 0.2);
+  border-radius: 0;
+}
+.AdminManagement .ant-btn-primary {
+  background: #f55d3e;
+  border: none;
+}
+#UpdateForm {
+  padding: 10px;
+}
