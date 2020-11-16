@@ -114,7 +114,6 @@ const RechargeAccount = () => {
                 >
                     <InputNumber
                         style={{ marginTop: 15, width: '50%', borderColor: '#fb2609' }}
-                        defaultValue={100000}
                         min={50000}
                         max={10000000000}
                         formatter={value => `${value}`.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} // https://blog.abelotech.com/posts/number-currency-formatting-javascript/
