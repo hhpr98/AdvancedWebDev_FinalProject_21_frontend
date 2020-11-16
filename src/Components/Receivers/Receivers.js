@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import {
   Table,
   Input,
-  InputNumber,
   Popconfirm,
   Form,
   Layout,
@@ -23,19 +22,9 @@ import {
   addReceiver
 } from './action';
 import './Receivers.css';
-import { value } from 'numeral';
 
 const { Content } = Layout;
 const { Title } = Typography;
-
-const layout = {
-  labelCol: {
-    span: 8
-  },
-  wrapperCol: {
-    span: 16
-  }
-};
 
 export default function Receivers() {
   const EditableCell = ({

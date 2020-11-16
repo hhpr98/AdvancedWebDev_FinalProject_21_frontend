@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Form, Input, message, InputNumber } from 'antd';
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
 import { createDebtReminder } from './action';
 import { useAuth } from '../Routes/Context';
 

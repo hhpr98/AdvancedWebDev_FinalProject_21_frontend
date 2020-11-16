@@ -12,7 +12,7 @@
     "axios": "^0.19.2",
     "bizcharts": "^3.5.7",
     "bootstrap": "^4.5.0",
-    "cross-fetch": "^3.0.4",
+    "cross-fetch": "^3.0.6",
     "date-fns": "^2.15.0",
     "env-cmd": "^10.1.0",
     "jquery": "^3.5.1",
@@ -39,7 +39,6 @@
   },
   "scripts": {
     "start": "set PORT=3030 && react-scripts start",
-    "start2": "set PORT=3030 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

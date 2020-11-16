@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import { getAllPartners } from '../action';
 import { useAuth } from '../../Routes/Context';
-import { Layout, Col, Typography, Row, Tabs, Select } from 'antd';
-import { WindowsFilled } from '@ant-design/icons';
+import { Layout, Select } from 'antd';
 
 const { Content } = Layout;
 const { Option } = Select;
-const { Title } = Typography;
 
 export default function ForeignBanks() {
   const [isLoading, setLoading] = useState(true);

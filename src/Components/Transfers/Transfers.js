@@ -1,10 +1,7 @@
 import React from 'react';
 import { Layout, Col, Typography, Row, Tabs } from 'antd';
 import { WindowsFilled } from '@ant-design/icons';
-import { ForeignBanks } from './ForeignBanks';
 import { InputForm } from './InputForm';
-
-
 
 const { Content } = Layout;
 const { Title } = Typography;

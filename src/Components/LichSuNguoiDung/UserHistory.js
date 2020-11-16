@@ -3,7 +3,6 @@ import { Layout, Col, Typography, Row, Tabs } from 'antd';
 import {
     WindowsFilled,
 } from '@ant-design/icons';
-import Swal from 'sweetalert2';
 import { getAllCustomerTransactionSelf } from './action';
 import './UserHistory.css';
 import { useAuth } from '../Routes/Context';

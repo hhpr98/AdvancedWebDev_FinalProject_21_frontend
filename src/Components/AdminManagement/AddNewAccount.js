@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Modal, Form, Input, Select, message } from 'antd';
+import { Modal, Form, Input, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { createAdmin } from './api';
 import { useAuth } from '../Routes/Context';
-
-const { Option } = Select;
 
 export const AddNewAccount = props => {
   const { visible, setVisible, dataControll } = props;

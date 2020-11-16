@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, Form, Input, Select, message } from 'antd';
+import { Modal, Form, Input, message } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { updateAdmin } from './api';
 import { useAuth } from '../Routes/Context';

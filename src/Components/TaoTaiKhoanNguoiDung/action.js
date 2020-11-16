@@ -1,4 +1,3 @@
-import Swal from "sweetalert2";
 import API from '../../Services/API';
 
 export const createANewCustomer = (token, name, email, phone, address, password) => {

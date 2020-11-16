@@ -1,4 +1,3 @@
-import Swal from "sweetalert2";
 import API from '../../Services/API';
 
 export const createNewSaveAccount = (token, email, balance, expired, rate) => {
