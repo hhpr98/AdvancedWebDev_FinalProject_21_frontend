@@ -14,17 +14,12 @@ const ForeignTransactionListDetail = props => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
-    const [filteredInfo, setFilteredInfo] = useState(null);
 
     const { transactionList, total } = props;
 
     useEffect(() => {
         setIsFetching(false);
     }, []);
-
-    const handleChange = (pagination, filters, sorter) => {
-        setFilteredInfo(filters);
-    };
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
@@ -218,7 +213,6 @@ const ForeignTransactionListDetail = props => {
                 dataSource={transactionList}
                 loading={isFetching}
                 scroll={{ x: true }}
-                onChange={handleChange}
                 expandable={{
                     expandedRowRender: record => (
                         <Descriptions title="Chi tiết">

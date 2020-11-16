@@ -12,17 +12,12 @@ const BeDebtReminderPaymentTransaction = props => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
-    const [filteredInfo, setFilteredInfo] = useState(null);
 
     const { beDebtReminderPaymentTransactionArray } = props;
 
     useEffect(() => {
         setIsFetching(false);
     }, []);
-
-    const handleChange = (pagination, filters, sorter) => {
-        setFilteredInfo(filters);
-    };
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
@@ -102,16 +97,6 @@ const BeDebtReminderPaymentTransaction = props => {
                     onOk={() => handleSearch(selectedKeys, confirm, dataIndex)}
 
                 />
-                {/* <Input
-                    ref={node => {
-                        searchInput = node;
-                    }}
-                    placeholder={`Search ${dataIndex}`}
-                    value={selectedKeys[0]}
-                    onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
-                    onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                    style={{ width: 188, marginBottom: 8, display: 'block' }}
-                /> */}
                 <Button
                     type="primary"
                     onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
@@ -214,7 +199,6 @@ const BeDebtReminderPaymentTransaction = props => {
             dataSource={beDebtReminderPaymentTransactionArray}
             loading={isFetching}
             scroll={{ x: true }}
-            onChange={handleChange}
             expandable={{
                 expandedRowRender: record => (
                     <Descriptions title="Chi tiết">

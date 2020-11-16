@@ -12,18 +12,12 @@ const PaymentTransaction = props => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
-    const [filteredInfo, setFilteredInfo] = useState(null);
 
     const { paymentTransactionArray } = props;
-    // console.log("ARRRR ",props.paymentTransactionArray);
 
     useEffect(() => {
         setIsFetching(false);
     }, []);
-
-    const handleChange = (pagination, filters, sorter) => {
-        setFilteredInfo(filters);
-    };
 
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
@@ -215,7 +209,6 @@ const PaymentTransaction = props => {
             dataSource={paymentTransactionArray}
             loading={isFetching}
             scroll={{ x: true }}
-            onChange={handleChange}
             expandable={{
                 expandedRowRender: record => (
                     <Descriptions title="Chi tiết">
