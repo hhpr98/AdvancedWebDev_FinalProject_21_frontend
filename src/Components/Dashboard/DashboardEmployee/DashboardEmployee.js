@@ -3,7 +3,7 @@ import AnalyticsBar from '../../PaymentManagement/AnalyticsBar/AnalyticsBar';
 
 const DashboardEmployee = ()=> {
   return (
-    <AnalyticsBar countPayments={0} paymentReportList={[]} />
+    <div></div>
   );
 };
 export default DashboardEmployee;
