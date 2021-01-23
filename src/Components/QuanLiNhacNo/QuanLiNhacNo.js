@@ -128,8 +128,8 @@ const DebtReminder = () => {
           textToHighlight={text.toString()}
         />
       ) : (
-        text
-      )
+          text
+        )
   });
   const columns = [
     {
@@ -160,7 +160,7 @@ const DebtReminder = () => {
       key: 'amount',
       align: 'left',
       width: '10%',
-      ...getColumnSearchProps('amount')
+      render: text => formatCurrencyValue(text)
     },
     {
       title: 'Lời nhắn',
@@ -193,6 +193,11 @@ const DebtReminder = () => {
       width: '5%'
     }
   ];
+
+  const formatCurrencyValue = (val) => {
+    return typeof (val) === "undefined" ? "n/a" : val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'); // 5,000 ; 23,000; 130,000 ; 2,400,000
+  }
+
   return (
     <Content
       className="payment-management"

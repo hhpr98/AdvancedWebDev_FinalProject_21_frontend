@@ -65,37 +65,37 @@ const ViewDebtBeReminder = () => {
             confirm,
             clearFilters
         }) => (
-                <div style={{ padding: 8 }}>
-                    <Input
-                        ref={node => {
-                            searchInput = node;
-                        }}
-                        placeholder={`Search ${dataIndex}`}
-                        value={selectedKeys[0]}
-                        onChange={e =>
-                            setSelectedKeys(e.target.value ? [e.target.value] : [])
-                        }
-                        onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                        style={{ width: 188, marginBottom: 8, display: 'block' }}
-                    />
-                    <Button
-                        type="primary"
-                        onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                        icon={<SearchOutlined />}
-                        size="small"
-                        style={{ width: 90, marginRight: 8 }}
-                    >
-                        Search
-        </Button>
-                    <Button
-                        onClick={() => handleReset(clearFilters)}
-                        size="small"
-                        style={{ width: 90 }}
-                    >
-                        Reset
-        </Button>
-                </div>
-            ),
+            <div style={{ padding: 8 }}>
+                <Input
+                    ref={node => {
+                        searchInput = node;
+                    }}
+                    placeholder={`Search ${dataIndex}`}
+                    value={selectedKeys[0]}
+                    onChange={e =>
+                        setSelectedKeys(e.target.value ? [e.target.value] : [])
+                    }
+                    onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
+                    style={{ width: 188, marginBottom: 8, display: 'block' }}
+                />
+                <Button
+                    type="primary"
+                    onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
+                    icon={<SearchOutlined />}
+                    size="small"
+                    style={{ width: 90, marginRight: 8 }}
+                >
+                    Search
+                </Button>
+                <Button
+                    onClick={() => handleReset(clearFilters)}
+                    size="small"
+                    style={{ width: 90 }}
+                >
+                    Reset
+                </Button>
+            </div>
+        ),
         filterIcon: filtered => (
             <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />
         ),
@@ -150,7 +150,7 @@ const ViewDebtBeReminder = () => {
             key: 'amount',
             align: 'left',
             width: '10%',
-            ...getColumnSearchProps('amount')
+            render: text => formatCurrencyValue(text)
         },
         {
             title: 'Lời nhắn',
@@ -183,6 +183,11 @@ const ViewDebtBeReminder = () => {
             width: '5%',
         }
     ];
+
+    const formatCurrencyValue = (val) => {
+        return typeof (val) === "undefined" ? "n/a" : val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'); // 5,000 ; 23,000; 130,000 ; 2,400,000
+    }
+
     return (
         <Content
             className="payment-management"

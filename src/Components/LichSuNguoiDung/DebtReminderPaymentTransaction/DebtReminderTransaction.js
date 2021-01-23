@@ -168,7 +168,7 @@ const DebtReminderPaymentTransaction = props => {
             title: 'Số tiền',
             dataIndex: 'amount',
             key: 'amount',
-            ...getColumnSearchProps('amount'),
+            render: text => formatCurrencyValue(text)
         },
         {
             title: 'Nội dung',
@@ -202,6 +202,10 @@ const DebtReminderPaymentTransaction = props => {
         setCurrentPage(1);
     };
 
+    const formatCurrencyValue = (val) => {
+        return typeof (val) === "undefined" ? "n/a" : val.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'); // 5,000 ; 23,000; 130,000 ; 2,400,000
+    }
+
     return (
         <Table
             columns={columns}
@@ -215,7 +219,7 @@ const DebtReminderPaymentTransaction = props => {
                         <Descriptions.Item label="ID">{record.id}</Descriptions.Item>
                         <Descriptions.Item label="Số tài khoản">{record.accountNumber}</Descriptions.Item>
                         <Descriptions.Item label="Chuyển đến">{record.receiverNumber}</Descriptions.Item>
-                        <Descriptions.Item label="Số tiền">{record.amount}</Descriptions.Item>
+                        <Descriptions.Item label="Số tiền">{formatCurrencyValue(record.amount)} VNĐ</Descriptions.Item>
                         <Descriptions.Item label="Nội dung">{record.description}</Descriptions.Item>
                         <Descriptions.Item label="Loại giao dịch">{record.type}</Descriptions.Item>
                         <Descriptions.Item label="Ngày tạo giao dịch">{new Date(record.createdAt).toLocaleString('en-GB')}</Descriptions.Item>
