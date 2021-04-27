@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "bizcharts": "^3.5.9",
     "bootstrap": "^4.6.0",
+    "caniuse-lite": "^1.0.30001218",
     "cross-fetch": "^3.1.4",
     "date-fns": "^2.21.1",
     "env-cmd": "^10.1.0",
@@ -48,18 +49,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@types/numeral": "0.0.26",
     "eslint": "^6.8.0",
@@ -85,5 +74,17 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
