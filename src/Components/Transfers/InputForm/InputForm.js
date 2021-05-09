@@ -22,8 +22,6 @@ import {
   Button,
   Radio,
   Select,
-  Layout,
-  Tabs,
   Modal,
   Result,
   Card,
@@ -35,8 +33,6 @@ import {
 import '../Transfers.css';
 import { addReceiver } from '../../Receivers/action';
 import Swal from 'sweetalert2';
-import { el, tr } from 'date-fns/locale';
-import { set } from 'numeral';
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -81,7 +77,6 @@ export default function InputForm(props) {
   const [successVisible, setSuccessVisible] = useState();
   const [failVisible, setFailVisible] = useState();
   const [typeFeeVisible, setTypeFeeVisible] = useState();
-  const [otp, setOTP] = useState('');
   const [verify, setVerify] = useState('none');
   const [state, dispatch] = useReducer(reducer, initialState);
   const [err, setErr] = useState('');
@@ -109,7 +104,7 @@ export default function InputForm(props) {
     }
   }, []);
 
-  useEffect(() => {}, [stk]);
+  useEffect(() => { }, [stk]);
 
   const clickSubmitForm = async val => {
     if (type === '2') {
@@ -326,10 +321,10 @@ export default function InputForm(props) {
               Swal.fire(
                 accountName,
                 'Số tài khoản: ' +
-                  stk +
-                  ' - ' +
-                  'Ngân hàng: ' +
-                  data[partnerId - 1].bankingName,
+                stk +
+                ' - ' +
+                'Ngân hàng: ' +
+                data[partnerId - 1].bankingName,
                 'success'
               );
             }
@@ -354,10 +349,10 @@ export default function InputForm(props) {
                 Swal.fire(
                   accountName,
                   'Số tài khoản: ' +
-                    stk +
-                    ' - ' +
-                    'Ngân hàng: ' +
-                    data[partnerId - 1].bankingName,
+                  stk +
+                  ' - ' +
+                  'Ngân hàng: ' +
+                  data[partnerId - 1].bankingName,
                   'success'
                 );
               }
@@ -448,8 +443,8 @@ export default function InputForm(props) {
             status.err === 'balance is not enoungh.'
               ? 'Tài khoản không đủ'
               : status.err === 'sender and receiver must be different.'
-              ? 'Tài khoản nhận phải khác tài khoản của bạn'
-              : status.err
+                ? 'Tài khoản nhận phải khác tài khoản của bạn'
+                : status.err
           );
           setFailVisible(true);
         }
@@ -750,7 +745,7 @@ export default function InputForm(props) {
           <Button
             type="primary"
             onClick={onSuccesModel}
-            style={{ backgroundColor: '#52C41A', fontWeight: 'bold' , borderColor: '#fff'}}
+            style={{ backgroundColor: '#52C41A', fontWeight: 'bold', borderColor: '#fff' }}
           >
             Xác nhận
           </Button>

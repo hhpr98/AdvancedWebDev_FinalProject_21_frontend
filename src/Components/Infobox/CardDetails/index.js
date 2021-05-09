@@ -12,19 +12,19 @@ const CardDetails = ({ number, name, expiresMonth }) => {
       <section className="card-details">
          <div className="card-details-row">
             <div>
-               <span style={{fontSize: 20}}>Số Tài khoản</span>
+               <span style={{ fontSize: 20 }}>Số Tài khoản</span>
                <p className="big">{number}</p>
             </div>
          </div>
 
          <div className="card-details-row card-details-row-1-2">
             <div>
-               <span style={{fontSize: 16}}>Chủ thẻ</span>
-               <p style={{fontSize: 16}}>{name || "Khách hàng"}</p>
+               <span style={{ fontSize: 16 }}>Chủ thẻ</span>
+               <p style={{ fontSize: 16 }}>{name || "Khách hàng"}</p>
             </div>
             <div>
-               <span style={{fontSize: 16}}>Ngày cấp</span>
-               <p style={{fontSize: 16}}>
+               <span style={{ fontSize: 16 }}>Ngày cấp</span>
+               <p style={{ fontSize: 16 }}>
                   {moment(expiresMonth).format("L")}
                </p>
             </div>

@@ -1,7 +1,6 @@
 import React from 'react';
-import AnalyticsBar from '../../PaymentManagement/AnalyticsBar/AnalyticsBar';
 
-const DashboardEmployee = ()=> {
+const DashboardEmployee = () => {
   return (
     <div></div>
   );

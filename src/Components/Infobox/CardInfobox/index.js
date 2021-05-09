@@ -17,24 +17,17 @@ const CardInfobox = ({
    balance,
    name,
    accountName
-   // income7Days,
-   // expenses7Days,
-   // currentUrl
 }) => {
    return (
       <section className="module infobox card-infobox">
          <header>
-            <CardLogos type={accountName === 'Tài khoản thanh toán'? "visa": 'save'} />
-            <CardDetails number={number} name={name} expiresMonth={expiresMonth}/>
+            <CardLogos type={accountName === 'Tài khoản thanh toán' ? "visa" : 'save'} />
+            <CardDetails number={number} name={name} expiresMonth={expiresMonth} />
          </header>
 
-         <AccountName accountName={accountName}/>
+         <AccountName accountName={accountName} />
          <AccountSummary balance={balance} income7Days={3500} expenses7Days={1500} />
 
-         {/* <MultiModuleButtons>
-            <SingleMultiButton text="Change PIN" href={`${currentUrl}/change-pin`} />
-            <SingleMultiButton text="Change limits" href={`${currentUrl}/change-limits`} />
-         </MultiModuleButtons> */}
       </section>
    );
 };

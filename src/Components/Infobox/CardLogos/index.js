@@ -8,7 +8,6 @@ import './style.scss';
 
 import cardChipImg from './card-chip.png';
 import visaImg from './visa-logo.png';
-// import mastercardImg from './save-account.png';
 
 const CardLogos = props => {
    const cardType = props.type;

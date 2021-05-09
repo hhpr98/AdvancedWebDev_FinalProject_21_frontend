@@ -1,1 +1,0 @@
-export { default as PaymentReport } from './PaymentReport';

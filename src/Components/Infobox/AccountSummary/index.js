@@ -9,23 +9,12 @@ import './style.scss';
 const AccountSummary = props => {
    return (
       <section className="account-summary">
-         {/* <section className="account-summary-boxes">
-            <div>
-               <span>Income</span>
-               <strong>&pound; {props.income7Days}</strong>
-            </div>
-            <div>
-               <span>Expenses</span>
-               <strong>&pound; {props.expenses7Days}</strong>
-            </div>
-         </section> */}
-
          <section className="account-summary-total">
-            <span style={{color: '#000000', fontSize: 20}}>Số dư</span>
+            <span style={{ color: '#000000', fontSize: 20 }}>Số dư</span>
             <strong>{Intl.NumberFormat('en-US', {
-                      style: 'currency',
-                      currency: 'VND',
-                    }).format(props.balance)}</strong>
+               style: 'currency',
+               currency: 'VND',
+            }).format(props.balance)}</strong>
          </section>
       </section>
    );
