@@ -92,7 +92,7 @@ export default function Receivers() {
       )
         .then(respone => respone.json())
         .then(res => setStatus(res))
-        .catch(err => console.log(err))
+        .catch(error => console.log(error))
         .finally(() => setLoading(false));
     } catch (errorInfo) {
       console.log(errorInfo);

@@ -81,8 +81,8 @@ const ForeignTransactionListDetail = props => {
                     textToHighlight={text.toString()}
                 />
             ) : (
-                    text
-                ),
+                text
+            ),
     });
 
     const getColumnSearchCreatedDateProps = dataIndex => ({
@@ -127,11 +127,6 @@ const ForeignTransactionListDetail = props => {
         onFilter: (value, record) => {
             return new Date(record.createdDate).toLocaleString('en-GB') === new Date(value).toLocaleString('en-GB');
         },
-        onFilterDropdownVisibleChange: visible => {
-            // if (visible) {
-            //     setTimeout(() => searchInput.select());
-            // }
-        },
         render: text =>
             searchedColumn === dataIndex ? (
                 <Highlighter
@@ -141,8 +136,8 @@ const ForeignTransactionListDetail = props => {
                     textToHighlight={new Date(text).toLocaleString('en-GB')}
                 />
             ) : (
-                    new Date(text).toLocaleString('en-GB')
-                ),
+                new Date(text).toLocaleString('en-GB')
+            ),
 
     });
 

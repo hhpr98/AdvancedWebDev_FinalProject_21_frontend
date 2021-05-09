@@ -79,8 +79,8 @@ const PaymentTransaction = props => {
                     textToHighlight={text.toString()}
                 />
             ) : (
-                    text
-                ),
+                text
+            ),
     });
 
     const getColumnSearchCreatedDateProps = dataIndex => ({
@@ -97,16 +97,6 @@ const PaymentTransaction = props => {
                     onOk={() => handleSearch(selectedKeys, confirm, dataIndex)}
 
                 />
-                {/* <Input
-                    ref={node => {
-                        searchInput = node;
-                    }}
-                    placeholder={`Search ${dataIndex}`}
-                    value={selectedKeys[0]}
-                    onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
-                    onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
-                    style={{ width: 188, marginBottom: 8, display: 'block' }}
-                /> */}
                 <Button
                     type="primary"
                     onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
@@ -125,11 +115,6 @@ const PaymentTransaction = props => {
         onFilter: (value, record) => {
             return new Date(record.createdDate).toLocaleString('en-GB') === new Date(value).toLocaleString('en-GB');
         },
-        onFilterDropdownVisibleChange: visible => {
-            // if (visible) {
-            //     setTimeout(() => searchInput.select());
-            // }
-        },
         render: text =>
             searchedColumn === dataIndex ? (
                 <Highlighter
@@ -139,8 +124,8 @@ const PaymentTransaction = props => {
                     textToHighlight={new Date(text).toLocaleString('en-GB')}
                 />
             ) : (
-                    new Date(text).toLocaleString('en-GB')
-                ),
+                new Date(text).toLocaleString('en-GB')
+            ),
 
     });
 
